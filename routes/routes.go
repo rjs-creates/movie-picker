@@ -9,9 +9,9 @@ func SetupRoutes() *mux.Router {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/register", handlers.RegisterUser)
-	router.HandleFunc("/login", handlers.RegisterUser)
-	router.HandleFunc("/logout", handlers.RegisterUser)
-	router.HandleFunc("/protected", handlers.RegisterUser)
+	router.HandleFunc("/login", handlers.Login)
+	router.HandleFunc("/logout", handlers.Logout)
+	router.HandleFunc("/protected", handlers.Protected)
 
 	return router
-}
+}	
